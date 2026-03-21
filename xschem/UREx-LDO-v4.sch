@@ -369,3 +369,23 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
+C {sky130_fd_pr/res_high_po_1p41.sym} 1100 -110 0 0 {name=R4
+L=173
+model=res_high_po_1p41
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_high_po_1p41.sym} 1100 60 0 0 {name=R5
+L=130
+model=res_high_po_1p41
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_high_po_1p41.sym} -200 20 0 0 {name=R6
+L=16
+model=res_high_po_1p41
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_high_po_1p41.sym} 1100 130 0 0 {name=R7
+L=129
+model=res_high_po_1p41
+spiceprefix=X
+mult=1}
