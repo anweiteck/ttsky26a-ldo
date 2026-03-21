@@ -1,16 +1,62 @@
-MACRO sky130_fd_pr__res_high_po_0p35_9T53K8
+MACRO UREx-LDO-v4
   CLASS BLOCK ;
-  FOREIGN sky130_fd_pr__res_high_po_0p35_9T53K8 ;
-  ORIGIN 0.740 20.495 ;
-  SIZE 1.480 BY 40.990 ;
-  OBS
-      LAYER pwell ;
-        RECT -1.005 -20.760 1.005 20.760 ;
-      LAYER li1 ;
-        RECT -0.825 -20.580 0.825 20.580 ;
+  FOREIGN UREx-LDO-v4 ;
+  ORIGIN 25.520 18.950 ;
+  SIZE 68.290 BY 54.500 ;
+  PIN VDD
+    ANTENNADIFFAREA 266.277985 ;
+    PORT
       LAYER met1 ;
-        RECT -0.125 -19.900 0.125 19.900 ;
+        RECT -19.970 -0.730 -18.970 0.270 ;
+    END
+  END VDD
+  PIN VOUT
+    ANTENNADIFFAREA 253.750000 ;
+    PORT
+      LAYER met1 ;
+        RECT 7.190 -18.930 8.190 -17.930 ;
+    END
+  END VOUT
+  PIN GND
+    ANTENNADIFFAREA 2.784000 ;
+    PORT
+      LAYER met1 ;
+        RECT -19.810 -12.240 -18.810 -11.240 ;
+    END
+  END GND
+  PIN Vref
+    ANTENNAGATEAREA 0.800000 ;
+    PORT
+      LAYER met1 ;
+        RECT -21.600 -4.310 -20.600 -3.310 ;
+    END
+  END Vref
+  OBS
+      LAYER nwell ;
+        RECT -18.410 -14.610 42.120 30.980 ;
+      LAYER li1 ;
+        RECT -18.240 -14.440 42.770 31.830 ;
+      LAYER met1 ;
+        RECT -25.520 0.270 41.470 35.520 ;
+        RECT -25.520 -0.600 -19.970 0.270 ;
+        RECT -25.520 -1.010 -20.250 -0.600 ;
+        RECT -18.690 -1.010 41.470 0.270 ;
+        RECT -25.520 -3.030 41.470 -1.010 ;
+        RECT -25.520 -4.590 -21.880 -3.030 ;
+        RECT -20.320 -4.590 41.470 -3.030 ;
+        RECT -25.520 -10.960 41.470 -4.590 ;
+        RECT -25.520 -12.520 -20.090 -10.960 ;
+        RECT -18.530 -12.520 41.470 -10.960 ;
+        RECT -25.520 -17.650 41.470 -12.520 ;
+        RECT -25.520 -18.950 6.910 -17.650 ;
+        RECT 8.470 -18.950 41.470 -17.650 ;
+      LAYER met2 ;
+        RECT -20.700 -18.930 41.600 35.550 ;
+      LAYER met3 ;
+        RECT -24.550 -5.240 7.610 30.970 ;
+      LAYER met4 ;
+        RECT -24.155 -1.630 7.590 30.910 ;
   END
-END sky130_fd_pr__res_high_po_0p35_9T53K8
+END UREx-LDO-v4
 END LIBRARY
 

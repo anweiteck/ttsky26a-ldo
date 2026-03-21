@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1774104695
+timestamp 1774105548
 << metal1 >>
 rect 14559 4550 15260 7827
 rect 14559 4172 15264 4550
@@ -168,7 +168,7 @@ rect 13249 0 13339 15
 rect 13500 12 14464 15
 rect 15181 0 15271 37
 use UREx-LDO-v4  UREx-LDO-v4_0
-timestamp 1774104695
+timestamp 1774105548
 transform 0 -1 12830 1 0 3692
 box -2552 -1895 4277 3555
 << labels >>
