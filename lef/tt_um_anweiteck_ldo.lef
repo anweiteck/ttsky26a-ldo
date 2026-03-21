@@ -43,6 +43,7 @@ MACRO tt_um_anweiteck_ldo
   PIN ua[1]
     DIRECTION INOUT ;
     USE SIGNAL ;
+    ANTENNADIFFAREA 2.784000 ;
     PORT
       LAYER met4 ;
         RECT 132.490 0.000 133.390 1.000 ;
@@ -51,6 +52,7 @@ MACRO tt_um_anweiteck_ldo
   PIN ua[2]
     DIRECTION INOUT ;
     USE SIGNAL ;
+    ANTENNAGATEAREA 0.800000 ;
     PORT
       LAYER met4 ;
         RECT 113.170 0.000 114.070 1.000 ;
@@ -441,7 +443,7 @@ MACRO tt_um_anweiteck_ldo
       LAYER met1 ;
         RECT 92.490 5.740 152.640 78.390 ;
       LAYER met2 ;
-        RECT 92.590 2.700 152.630 78.520 ;
+        RECT 92.590 2.700 152.560 78.520 ;
       LAYER met3 ;
         RECT 92.590 0.410 152.530 44.530 ;
       LAYER met4 ;
