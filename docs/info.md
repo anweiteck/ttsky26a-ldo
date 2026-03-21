@@ -9,11 +9,13 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+Just a low-drop out regulator that takes in 1.2V-3V on an analog pin and outputs 1V through another analog pin. \
+requires a 0.6V reference voltage.
+maximum output current is 50mA
 
 ## How to test
 
-Explain how to use your project
+Connect Vin to your input voltage and Vref to 0.6V, Vout is the output voltage
 
 ## External hardware
 
