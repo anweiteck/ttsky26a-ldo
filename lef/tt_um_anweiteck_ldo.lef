@@ -147,6 +147,14 @@ MACRO tt_um_anweiteck_ldo
         RECT 124.510 224.760 124.810 225.760 ;
     END
   END ui_in[5]
+  PIN ui_in[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 121.750 224.760 122.050 225.760 ;
+    END
+  END ui_in[6]
   PIN ui_in[7]
     DIRECTION INPUT ;
     USE SIGNAL ;
@@ -429,21 +437,21 @@ MACRO tt_um_anweiteck_ldo
   END VGND
   OBS
       LAYER nwell ;
-        RECT 87.350 14.930 132.940 75.460 ;
+        RECT 97.320 18.510 142.910 79.040 ;
       LAYER li1 ;
-        RECT 86.500 15.100 132.770 76.110 ;
+        RECT 96.470 18.680 142.740 79.690 ;
       LAYER met1 ;
-        RECT 82.810 0.000 152.710 74.810 ;
+        RECT 92.490 5.740 152.640 78.390 ;
       LAYER met2 ;
-        RECT 82.780 2.740 152.600 74.940 ;
+        RECT 92.590 2.700 152.630 78.520 ;
       LAYER met3 ;
-        RECT 83.370 0.960 152.710 40.950 ;
+        RECT 92.590 0.410 152.530 44.530 ;
       LAYER met4 ;
-        RECT 83.420 1.400 152.710 40.930 ;
-        RECT 83.420 0.000 93.450 1.400 ;
-        RECT 95.150 0.000 112.770 1.400 ;
-        RECT 114.470 0.000 132.090 1.400 ;
-        RECT 133.790 0.000 151.410 1.400 ;
+        RECT 92.620 1.400 152.550 44.510 ;
+        RECT 92.620 0.120 93.450 1.400 ;
+        RECT 95.150 0.120 112.770 1.400 ;
+        RECT 114.470 0.120 132.090 1.400 ;
+        RECT 133.790 0.120 151.410 1.400 ;
   END
 END tt_um_anweiteck_ldo
 END LIBRARY
