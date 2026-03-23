@@ -43,7 +43,7 @@ MACRO tt_um_anweiteck_ldo
   PIN ua[1]
     DIRECTION INOUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 2.784000 ;
+    ANTENNADIFFAREA 55.028400 ;
     PORT
       LAYER met4 ;
         RECT 132.490 0.000 133.390 1.000 ;
@@ -61,7 +61,7 @@ MACRO tt_um_anweiteck_ldo
   PIN ua[3]
     DIRECTION INOUT ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 266.277985 ;
+    ANTENNADIFFAREA 365.780579 ;
     PORT
       LAYER met4 ;
         RECT 93.850 0.000 94.750 1.000 ;
@@ -437,21 +437,21 @@ MACRO tt_um_anweiteck_ldo
   END VGND
   OBS
       LAYER nwell ;
-        RECT 97.320 18.510 142.910 79.040 ;
+        RECT 62.430 10.710 128.830 71.310 ;
       LAYER li1 ;
-        RECT 96.470 18.680 142.740 79.690 ;
+        RECT 58.150 8.630 132.850 72.680 ;
       LAYER met1 ;
-        RECT 92.490 5.740 152.640 78.390 ;
+        RECT 58.180 5.350 139.600 72.520 ;
       LAYER met2 ;
-        RECT 92.590 2.700 152.560 78.520 ;
+        RECT 58.180 4.580 151.780 65.300 ;
       LAYER met3 ;
-        RECT 92.590 0.410 152.530 44.530 ;
+        RECT 84.710 2.140 151.240 66.150 ;
       LAYER met4 ;
-        RECT 92.620 1.400 152.550 44.510 ;
-        RECT 92.620 0.120 93.450 1.400 ;
-        RECT 95.150 0.120 112.770 1.400 ;
-        RECT 114.470 0.120 132.090 1.400 ;
-        RECT 133.790 0.120 151.410 1.400 ;
+        RECT 84.830 1.400 152.270 66.130 ;
+        RECT 84.830 0.150 93.450 1.400 ;
+        RECT 95.150 0.150 112.770 1.400 ;
+        RECT 114.470 0.150 132.090 1.400 ;
+        RECT 133.790 0.150 151.410 1.400 ;
   END
 END tt_um_anweiteck_ldo
 END LIBRARY

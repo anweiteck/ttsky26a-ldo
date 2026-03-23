@@ -19,7 +19,7 @@ value= "
 
 .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt 
 *.tran 1m 1n
-.dc Iload 1n 1m 0.01um
+.dc Iload 1n 1m 0.01u
 
 .control
 run

@@ -1,0 +1,370 @@
+timestamp 0
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+parameters sky130_fd_pr__pfet_01v8_lvt l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__nfet_01v8_lvt l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__res_high_po_5p73 l=l+32
+parameters sky130_fd_pr__res_high_po_2p85 l=l+32
+parameters sky130_fd_pr__res_high_po_1p41 l=l+32
+parameters sky130_fd_pr__res_high_po_0p69 l=l+32
+parameters sky130_fd_pr__res_high_po_0p35 l=l+32
+parameters sky130_fd_pr__res_high_po l=l+32 w=w
+parameters sky130_fd_pr__cap_mim_m3_1 w=w l=l
+port "Vref" 3 3190 -15802 3390 -15602 m1
+port "VOUT" 1 14914 -17896 15114 -17696 m1
+port "VDD" 0 4026 -15128 4226 -14928 m1
+port "GND" 2 3964 -19314 4164 -19114 m1
+node "a_4960_n18418#" 49103 0 4960 -18418 ppres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 752360 21636 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_4972_n17792#" 32473 0 4972 -17792 ppres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 497560 14356 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_4784_n16984#" 2686 0 4784 -16984 ppres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 41160 1316 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "XR1.R2" 643 8185.97 4528 -18418 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 67200 1072 0 0 134560 4952 1698400 11012 597568 7452 0 0 0 0 0 0 0 0
+equiv "XR1.R2" "XM2.G"
+equiv "XR1.R2" "XR3.R2"
+node "XM1.S" 2020 1385.32 6786 -16076 ndif 0 0 0 0 0 0 0 0 32480 1468 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19856 1372 185912 2792 0 0 0 0 0 0 0 0 0 0
+equiv "XM1.S" "XM5.D"
+equiv "XM1.S" "XM2.D"
+node "Vref" 264 2063.97 3190 -15802 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 67200 1072 0 0 13600 936 196336 3084 741948 7304 0 0 0 0 0 0 0 0
+equiv "Vref" "XM1.G"
+node "XR2.R1" 1258 1933.82 5372 -16984 xpc 0 0 0 0 0 0 0 0 25520 996 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 75712 2972 389438 3778 0 0 0 0 0 0 0 0 0 0
+equiv "XR2.R1" "XM14.S"
+node "XM2.S" 1634 3591.12 7380 -16076 ndif 0 0 0 0 0 0 0 0 9280 436 5800 316 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 72380 2208 0 0 14144 1104 392124 4864 210240 1948 211968 1928 35816302 26042 0 0 0 0
+equiv "XM2.S" "XC1.C1"
+equiv "XM2.S" "XM4.S"
+equiv "XM2.S" "XM6.G"
+node "XM1.D" 1516 1027.37 6528 -16076 ndif 0 0 0 0 0 0 0 0 9280 436 5800 316 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 117600 1976 0 0 36584 2560 520220 6360 0 0 0 0 0 0 0 0 0 0
+equiv "XM1.D" "XM3.G"
+equiv "XM1.D" "XM3.D"
+equiv "XM1.D" "XM4.G"
+node "XM7.G" 3148 5304.37 6120 -14741 pdif 0 0 0 0 0 0 0 0 13920 596 11600 516 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 229312 5060 0 0 47192 3320 846154 10582 0 0 0 0 0 0 0 0 0 0
+equiv "XM7.G" "XM10.S"
+equiv "XM7.G" "XM8.G"
+equiv "XM7.G" "XM8.D"
+equiv "XM7.G" "XM5.G"
+node "XM13.S" 2591 3404.69 4694 -14741 pdif 0 0 0 0 0 0 0 0 23200 916 11600 516 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 238400 3184 0 0 48144 3240 838732 7662 0 0 0 0 0 0 0 0 0 0
+equiv "XM13.S" "XM11.D"
+equiv "XM13.S" "XM14.G"
+equiv "XM13.S" "XM13.G"
+node "XM14.D" 3032 1563.9 4752 -14838 p 0 0 0 0 0 0 0 0 25520 996 11600 516 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 236400 3564 0 0 63104 4256 712624 8372 0 0 0 0 0 0 0 0 0 0
+equiv "XM14.D" "XM10.G"
+equiv "XM14.D" "XM11.G"
+equiv "XM14.D" "XM12.G"
+equiv "XM14.D" "XM12.D"
+node "VOUT" 675229 37606 14914 -17896 m1 0 0 0 0 0 0 0 0 0 0 10150000 354060 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6020000 354948 14212624 362520 44777956 393010 0 0 0 0 0 0 0 0
+equiv "VOUT" "XM18.S13"
+equiv "VOUT" "XM18.S11"
+equiv "VOUT" "XM18.S9"
+equiv "VOUT" "XM18.S7"
+equiv "VOUT" "XM18.S5"
+equiv "VOUT" "XM18.S3"
+equiv "VOUT" "XM18.S1"
+equiv "VOUT" "XM17.S13"
+equiv "VOUT" "XM17.S11"
+equiv "VOUT" "XM17.S9"
+equiv "VOUT" "XM17.S7"
+equiv "VOUT" "XM17.S5"
+equiv "VOUT" "XM17.S3"
+equiv "VOUT" "XM17.S1"
+equiv "VOUT" "XM16.S13"
+equiv "VOUT" "XM16.S11"
+equiv "VOUT" "XM16.S9"
+equiv "VOUT" "XM16.S7"
+equiv "VOUT" "XM16.S5"
+equiv "VOUT" "XM16.S3"
+equiv "VOUT" "XM16.S1"
+equiv "VOUT" "XM15.S13"
+equiv "VOUT" "XM15.S11"
+equiv "VOUT" "XM15.S9"
+equiv "VOUT" "XM15.S7"
+equiv "VOUT" "XM15.S5"
+equiv "VOUT" "XM15.S3"
+equiv "VOUT" "XM15.S1"
+equiv "VOUT" "XM9.S13"
+equiv "VOUT" "XM9.S11"
+equiv "VOUT" "XM9.S9"
+equiv "VOUT" "XM9.S7"
+equiv "VOUT" "XM9.S5"
+equiv "VOUT" "XM9.S3"
+equiv "VOUT" "XM9.S1"
+equiv "VOUT" "XR1.R1"
+node "XM7.S" 270847 21787.1 4804 -10620 p 0 0 0 0 0 0 0 0 60320 2196 48720 1796 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25450600 736960 0 0 397664 33048 7436598 54986 629636 5144 39968534 25782 581376 12304 0 0 0 0
+equiv "XM7.S" "XM18.G0"
+equiv "XM7.S" "XM18.G1"
+equiv "XM7.S" "XM18.G2"
+equiv "XM7.S" "XM18.G3"
+equiv "XM7.S" "XM18.G4"
+equiv "XM7.S" "XM18.G5"
+equiv "XM7.S" "XM18.G13"
+equiv "XM7.S" "XM18.G12"
+equiv "XM7.S" "XM18.G11"
+equiv "XM7.S" "XM18.G10"
+equiv "XM7.S" "XM18.G9"
+equiv "XM7.S" "XM18.G8"
+equiv "XM7.S" "XM18.G7"
+equiv "XM7.S" "XM18.G6"
+equiv "XM7.S" "XM17.G0"
+equiv "XM7.S" "XM17.G1"
+equiv "XM7.S" "XM17.G2"
+equiv "XM7.S" "XM17.G3"
+equiv "XM7.S" "XM17.G4"
+equiv "XM7.S" "XM17.G5"
+equiv "XM7.S" "XM17.G13"
+equiv "XM7.S" "XM17.G12"
+equiv "XM7.S" "XM17.G11"
+equiv "XM7.S" "XM17.G10"
+equiv "XM7.S" "XM17.G9"
+equiv "XM7.S" "XM17.G8"
+equiv "XM7.S" "XM17.G7"
+equiv "XM7.S" "XM17.G6"
+equiv "XM7.S" "XM16.G0"
+equiv "XM7.S" "XM16.G1"
+equiv "XM7.S" "XM16.G2"
+equiv "XM7.S" "XM16.G3"
+equiv "XM7.S" "XM16.G4"
+equiv "XM7.S" "XM16.G5"
+equiv "XM7.S" "XM16.G13"
+equiv "XM7.S" "XM16.G12"
+equiv "XM7.S" "XM16.G11"
+equiv "XM7.S" "XM16.G10"
+equiv "XM7.S" "XM16.G9"
+equiv "XM7.S" "XM16.G8"
+equiv "XM7.S" "XM16.G7"
+equiv "XM7.S" "XM16.G6"
+equiv "XM7.S" "XM15.G0"
+equiv "XM7.S" "XM15.G1"
+equiv "XM7.S" "XM15.G2"
+equiv "XM7.S" "XM15.G3"
+equiv "XM7.S" "XM15.G4"
+equiv "XM7.S" "XM15.G5"
+equiv "XM7.S" "XM15.G13"
+equiv "XM7.S" "XM15.G12"
+equiv "XM7.S" "XM15.G11"
+equiv "XM7.S" "XM15.G10"
+equiv "XM7.S" "XM15.G9"
+equiv "XM7.S" "XM15.G8"
+equiv "XM7.S" "XM15.G7"
+equiv "XM7.S" "XM15.G6"
+equiv "XM7.S" "XM9.G0"
+equiv "XM7.S" "XM9.G1"
+equiv "XM7.S" "XM9.G2"
+equiv "XM7.S" "XM9.G3"
+equiv "XM7.S" "XM9.G4"
+equiv "XM7.S" "XM9.G5"
+equiv "XM7.S" "XM9.G13"
+equiv "XM7.S" "XM9.G12"
+equiv "XM7.S" "XM9.G11"
+equiv "XM7.S" "XM9.G10"
+equiv "XM7.S" "XM9.G9"
+equiv "XM7.S" "XM9.G8"
+equiv "XM7.S" "XM9.G7"
+equiv "XM7.S" "XM9.G6"
+equiv "XM7.S" "XC1.C2"
+equiv "XM7.S" "XM6.S"
+node "VDD" 1030561 232434 4026 -15128 m1 0 0 0 0 59880820 42852 0 0 2936104 172712 11695120 408616 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 52427544 537420 33446556 460396 21450968 441272 0 0 0 0 0 0 0 0
+equiv "VDD" "XM18.D12"
+equiv "VDD" "XM18.D10"
+equiv "VDD" "XM18.D8"
+equiv "VDD" "XM18.D6"
+equiv "VDD" "XM18.D4"
+equiv "VDD" "XM18.D2"
+equiv "VDD" "XM18.D0"
+equiv "VDD" "XM18.B"
+equiv "VDD" "XM17.D12"
+equiv "VDD" "XM17.D10"
+equiv "VDD" "XM17.D8"
+equiv "VDD" "XM17.D6"
+equiv "VDD" "XM17.D4"
+equiv "VDD" "XM17.D2"
+equiv "VDD" "XM17.D0"
+equiv "VDD" "XM17.B"
+equiv "VDD" "XM16.D12"
+equiv "VDD" "XM16.D10"
+equiv "VDD" "XM16.D8"
+equiv "VDD" "XM16.D6"
+equiv "VDD" "XM16.D4"
+equiv "VDD" "XM16.D2"
+equiv "VDD" "XM16.D0"
+equiv "VDD" "XM16.B"
+equiv "VDD" "XM15.D12"
+equiv "VDD" "XM15.D10"
+equiv "VDD" "XM15.D8"
+equiv "VDD" "XM15.D6"
+equiv "VDD" "XM15.D4"
+equiv "VDD" "XM15.D2"
+equiv "VDD" "XM15.D0"
+equiv "VDD" "XM15.B"
+equiv "VDD" "XM9.D12"
+equiv "VDD" "XM9.D10"
+equiv "VDD" "XM9.D8"
+equiv "VDD" "XM9.D6"
+equiv "VDD" "XM9.D4"
+equiv "VDD" "XM9.D2"
+equiv "VDD" "XM9.D0"
+equiv "VDD" "XM9.B"
+equiv "VDD" "XM3.S"
+equiv "VDD" "XM3.B"
+equiv "VDD" "XM4.D"
+equiv "VDD" "XM4.B"
+equiv "VDD" "XM6.D"
+equiv "VDD" "XM6.B"
+equiv "VDD" "XM10.D"
+equiv "VDD" "XM10.B"
+equiv "VDD" "XM11.S"
+equiv "VDD" "XM11.B"
+equiv "VDD" "XM12.S"
+equiv "VDD" "XM12.B"
+substrate "GND" 0 0 3964 -19314 m1 0 0 0 0 0 0 0 0 111360 4304 2089776 122928 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 26144452 101008 9909428 36900 0 0 0 0 0 0 0 0 0 0
+equiv "GND" "XM14.B"
+equiv "GND" "XM13.D"
+equiv "GND" "XM13.B"
+equiv "GND" "XM8.S"
+equiv "GND" "XM8.B"
+equiv "GND" "XM5.S"
+equiv "GND" "XM5.B"
+equiv "GND" "XM2.B"
+equiv "GND" "XM1.B"
+equiv "GND" "XR3.R1"
+equiv "GND" "XR3.B"
+equiv "GND" "XR2.R2"
+equiv "GND" "XR2.B"
+equiv "GND" "XR1.B"
+equiv "GND" "XM7.D"
+equiv "GND" "XM7.B"
+cap "XR2.R1" "VDD" 0.988958
+cap "XM7.G" "XM1.D" 720.038
+cap "XM14.D" "XM1.D" 5.30465
+cap "XM7.G" "XM2.S" 39.0492
+cap "XM2.S" "VOUT" 1254.59
+cap "XM2.S" "XM14.D" 0.00126074
+cap "XR1.R2" "XM13.S" 837.014
+cap "XM7.G" "XM7.S" 124.351
+cap "VOUT" "XM7.S" 92902.9
+cap "Vref" "VDD" 14.342
+cap "XM1.S" "VDD" 1.39428
+cap "Vref" "XM1.D" 489.565
+cap "XM1.S" "XM1.D" 64.3788
+cap "XM2.S" "Vref" 3.62173
+cap "XM1.S" "XM2.S" 47.0993
+cap "XR1.R2" "VDD" 290.412
+cap "XM7.G" "XM14.D" 196.93
+cap "XM13.S" "VDD" 1120.49
+cap "Vref" "XM7.S" 0.0116619
+cap "XR2.R1" "XM7.G" 494.061
+cap "XR2.R1" "XM14.D" 133.52
+cap "XR1.R2" "XM1.D" 355.538
+cap "XM13.S" "XM1.D" 0.186081
+cap "XM2.S" "XR1.R2" 432.177
+cap "XR1.R2" "XM7.S" 2.92264
+cap "XM1.S" "XM7.G" 146.494
+cap "XM7.G" "Vref" 328.336
+cap "Vref" "XM14.D" 402.783
+cap "XR2.R1" "Vref" 30.503
+cap "XM1.D" "VDD" 2481.7
+cap "XM2.S" "VDD" 1937.74
+cap "XM7.G" "XR1.R2" 274.371
+cap "XM7.G" "XM13.S" 6.07545
+cap "XR1.R2" "XM14.D" 398.844
+cap "XM14.D" "XM13.S" 935.353
+cap "XM7.S" "VDD" 64663.8
+cap "XM1.S" "Vref" 35.7462
+cap "XR2.R1" "XR1.R2" 4.61367
+cap "XR2.R1" "XM13.S" 146.42
+cap "XM2.S" "XM1.D" 179.133
+cap "XM1.D" "XM7.S" 6.65271
+cap "XM2.S" "XM7.S" 80654.3
+cap "XM7.G" "VDD" 566.347
+cap "XM1.S" "XR1.R2" 65.1188
+cap "XR1.R2" "Vref" 1728.75
+cap "Vref" "XM13.S" 892.964
+cap "VOUT" "VDD" 362607
+cap "XM1.S" "XM13.S" 0.097967
+cap "XM14.D" "VDD" 3679.99
+device csubckt sky130_fd_pr__cap_mim_m3_1 8882 -17334 8883 -17333 w=6000 l=6000 "None" "XM2.S" 23680 0 "XM7.S" 0 39968534,25782
+device rsubckt sky130_fd_pr__res_high_po_0p35 4960 -18418 4961 -18417 l=10748 "GND" "a_4960_n18418#" 0 0 "XR1.R2" 70 30240,1004 "GND" 70 30240,1004
+device rsubckt sky130_fd_pr__res_high_po_0p35 4972 -17792 4973 -17791 l=7108 "GND" "a_4972_n17792#" 0 0 "XR1.R2" 70 30240,1004 "VOUT" 70 30240,1004
+device msubckt sky130_fd_pr__nfet_01v8_lvt 7982 -16958 7983 -16957 l=50 w=1040 "GND" "XM7.G" 100 0 "GND" 1040 60320,2196 "XM7.S" 1040 60320,2196
+device msubckt sky130_fd_pr__nfet_01v8_lvt 7168 -16892 7169 -16891 l=200 w=240 "GND" "XM7.G" 400 0 "XM1.S" 240 13920,596 "GND" 240 13920,596
+device msubckt sky130_fd_pr__nfet_01v8_lvt 6582 -16894 6583 -16893 l=200 w=240 "GND" "XM7.G" 400 0 "XM7.G" 240 13920,596 "GND" 240 13920,596
+device rsubckt sky130_fd_pr__res_high_po_0p35 4784 -16984 4785 -16983 l=588 "GND" "a_4784_n16984#" 0 0 "GND" 70 30240,1004 "XR2.R1" 70 30240,1004
+device msubckt sky130_fd_pr__nfet_01v8_lvt 7180 -16076 7181 -16075 l=200 w=160 "GND" "XR1.R2" 400 0 "XM1.S" 160 9280,436 "XM2.S" 160 9280,436
+device msubckt sky130_fd_pr__nfet_01v8_lvt 6586 -16076 6587 -16075 l=200 w=160 "GND" "Vref" 400 0 "XM1.D" 160 9280,436 "XM1.S" 160 9280,436
+device msubckt sky130_fd_pr__nfet_01v8_lvt 5556 -16412 5557 -16411 l=200 w=440 "GND" "XM13.S" 400 0 "XM14.D" 440 25520,996 "XR2.R1" 440 25520,996
+device msubckt sky130_fd_pr__nfet_01v8_lvt 4964 -16370 4965 -16369 l=200 w=400 "GND" "XM13.S" 400 0 "GND" 400 23200,916 "XM13.S" 400 23200,916
+device msubckt sky130_fd_pr__pfet_01v8_lvt 8050 -14757 8051 -14756 l=70 w=840 "VDD" "XM2.S" 140 0 "VDD" 840 48720,1796 "XM7.S" 840 48720,1796
+device msubckt sky130_fd_pr__pfet_01v8_lvt 7198 -14739 7199 -14738 l=200 w=100 "VDD" "XM1.D" 400 0 "VDD" 100 5800,316 "XM2.S" 100 5800,316
+device msubckt sky130_fd_pr__pfet_01v8_lvt 6606 -14739 6607 -14738 l=200 w=100 "VDD" "XM1.D" 400 0 "XM1.D" 100 5800,316 "VDD" 100 5800,316
+device msubckt sky130_fd_pr__pfet_01v8_lvt 5920 -14741 5921 -14740 l=200 w=200 "VDD" "XM14.D" 400 0 "VDD" 200 11600,516 "XM7.G" 200 11600,516
+device msubckt sky130_fd_pr__pfet_01v8_lvt 5344 -14741 5345 -14740 l=200 w=200 "VDD" "XM14.D" 400 0 "XM14.D" 200 11600,516 "VDD" 200 11600,516
+device msubckt sky130_fd_pr__pfet_01v8_lvt 4752 -14741 4753 -14740 l=200 w=200 "VDD" "XM14.D" 400 0 "XM13.S" 200 11600,516 "VDD" 200 11600,516
+device msubckt sky130_fd_pr__pfet_01v8_lvt 14912 -10525 14913 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 290000,10116
+device msubckt sky130_fd_pr__pfet_01v8_lvt 14784 -10525 14785 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 14656 -10525 14657 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 14528 -10525 14529 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 14400 -10525 14401 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 14272 -10525 14273 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 14144 -10525 14145 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 14016 -10525 14017 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 13888 -10525 13889 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 13760 -10525 13761 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 13632 -10525 13633 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 13504 -10525 13505 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 13376 -10525 13377 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 13248 -10525 13249 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 290000,10116 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 12804 -10525 12805 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 290000,10116
+device msubckt sky130_fd_pr__pfet_01v8_lvt 12676 -10525 12677 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 12548 -10525 12549 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 12420 -10525 12421 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 12292 -10525 12293 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 12164 -10525 12165 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 12036 -10525 12037 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 11908 -10525 11909 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 11780 -10525 11781 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 11652 -10525 11653 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 11524 -10525 11525 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 11396 -10525 11397 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 11268 -10525 11269 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 11140 -10525 11141 -10524 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 290000,10116 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 10696 -10523 10697 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 290000,10116
+device msubckt sky130_fd_pr__pfet_01v8_lvt 10568 -10523 10569 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 10440 -10523 10441 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 10312 -10523 10313 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 10184 -10523 10185 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 10056 -10523 10057 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 9928 -10523 9929 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 9800 -10523 9801 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 9672 -10523 9673 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 9544 -10523 9545 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 9416 -10523 9417 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 9288 -10523 9289 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 9160 -10523 9161 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 9032 -10523 9033 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 290000,10116 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 8586 -10523 8587 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 290000,10116
+device msubckt sky130_fd_pr__pfet_01v8_lvt 8458 -10523 8459 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 8330 -10523 8331 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 8202 -10523 8203 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 8074 -10523 8075 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 7946 -10523 7947 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 7818 -10523 7819 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 7690 -10523 7691 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 7562 -10523 7563 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 7434 -10523 7435 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 7306 -10523 7307 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 7178 -10523 7179 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 7050 -10523 7051 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 6922 -10523 6923 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 290000,10116 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 6468 -10523 6469 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 290000,10116
+device msubckt sky130_fd_pr__pfet_01v8_lvt 6340 -10523 6341 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 6212 -10523 6213 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 6084 -10523 6085 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 5956 -10523 5957 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 5828 -10523 5829 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 5700 -10523 5701 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 5572 -10523 5573 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 5444 -10523 5445 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 5316 -10523 5317 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 5188 -10523 5189 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 5060 -10523 5061 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 145000,5058 "VOUT" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 4932 -10523 4933 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VOUT" 5000 145000,5058 "VDD" 5000 145000,5058
+device msubckt sky130_fd_pr__pfet_01v8_lvt 4804 -10523 4805 -10522 l=70 w=5000 "VDD" "XM7.S" 140 0 "VDD" 5000 290000,10116 "VOUT" 5000 145000,5058
