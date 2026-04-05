@@ -1,0 +1,47 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {}
+V {}
+S {}
+F {}
+E {}
+T {Testbench for plotting vout/vin, quiescent current, and efficiency} -150 -50 0 0 0.2 0.2 {}
+N -150 -10 -80 -10 {lab=vin}
+N 60 -10 120 -10 {lab=vout}
+N 45 -10 60 -10 {lab=vout}
+N -80 -10 -65 -10 {lab=vin}
+N -70 10 -70 25 {lab=#net1}
+N -70 10 -65 10 {lab=#net1}
+C {code.sym} 220 -30 0 0 {name=s1 only_toplevel=false
+value="
+.param mc_mm_switch=1
+.param mc_pr_switch=1
+.param Rload=20
+.control
+  dc vin 0.5 5 0.1
+  wrdata mc_out.csv v(vin) v(vout)  
+
+  set appendwrite                      
+
+  repeat 100
+    dc vin 0.5 5 0.1
+    wrdata mc_out.csv v(vin) v(vout) 
+  end
+.endc
+"}
+C {vsource.sym} -150 20 0 0 {name=vin value=0 savecurrent=false}
+C {gnd.sym} -150 50 0 0 {name=l1 lab=GND}
+C {gnd.sym} -10 40 0 0 {name=l2 lab=GND}
+C {lab_wire.sym} 120 -10 2 0 {name=p6 sig_type=std_logic lab=vout}
+C {lab_wire.sym} -150 -10 0 0 {name=p1 sig_type=std_logic lab=vin}
+C {res.sym} 110 20 0 0 {name=R2
+value=\{Rload\}
+footprint=1206
+device=resistor
+m=1}
+C {gnd.sym} 110 50 0 0 {name=l3 lab=GND}
+C {UREx-LDO-v4-cornersim.sym} 85 0 0 0 {name=X1
+}
+C {vsource.sym} -70 55 0 0 {name=vin1 value=0.6 savecurrent=false}
+C {gnd.sym} -70 85 0 0 {name=l4 lab=GND}
+C {sky130_fd_pr/corner.sym} 350 -30 0 0 {name=CORNER only_toplevel=false corner=mc}
