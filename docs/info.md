@@ -9,9 +9,22 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Just a low-drop out regulator that takes in 1.2V-3V on an analog pin and outputs 1V through another analog pin. \
-requires a 0.6V reference voltage.
-maximum output current is 50mA
+Just a low-drop out regulator that takes in 1.2V-3V on an analog pin and outputs 1V through another analog pin.
+
+![schematic](schematic.png)
+
+![layout](layout.png)
+
+![ttlayout](TT layout.jpg)
+
+Its expected characteristics are:
+* output voltage: 1V
+* dropout voltage: 0.2V
+* maximum output current: 50mA
+* efficiency: 82% @Vin=1.2V, 55% @Vin=1.8V
+* max Vin: 4V
+* line regulation: 6.78mV/V
+* load regulation: 67mV/A
 
 ## How to test
 
