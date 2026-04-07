@@ -15,7 +15,7 @@ Just a low-drop out regulator that takes in 1.2V-3V on an analog pin and outputs
 
 ![layout](layout.png)
 
-![ttlayout](TT layout.jpg)
+![ttlayout](TT_layout.jpg)
 
 Its expected characteristics are:
 * output voltage: 1V
