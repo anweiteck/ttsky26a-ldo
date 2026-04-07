@@ -36,6 +36,7 @@ value="
   set appendwrite                      
 
   repeat 100
+    reset
     tran 1u 3m
     wrdata loadreg.csv v(vout) 
   end

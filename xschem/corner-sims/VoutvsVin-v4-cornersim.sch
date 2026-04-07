@@ -24,6 +24,7 @@ value="
   set appendwrite                      
 
   repeat 100
+    reset
     dc vin 0.5 5 0.1
     wrdata mc_out.csv v(vin) v(vout) 
   end
