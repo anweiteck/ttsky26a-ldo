@@ -41,8 +41,10 @@ footprint=1206
 device=resistor
 m=1}
 C {gnd.sym} 110 50 0 0 {name=l3 lab=GND}
-C {UREx-LDO-v4-cornersim.sym} 85 0 0 0 {name=X1
-}
+C {UREx-LDO-v4.sym} 85 0 0 0 {name=X1
+schematic=UREx-LDO-v4_parax.spice
+spice_sym_def="tcleval(.include [file normalize UREx-LDO-v4_parax.spice])"
+tclcommand="textwindow [file normalize UREx-LDO-v4_parax.spice]"}
 C {vsource.sym} -70 55 0 0 {name=vin1 value=0.6 savecurrent=false}
 C {gnd.sym} -70 85 0 0 {name=l4 lab=GND}
 C {sky130_fd_pr/corner.sym} 350 -30 0 0 {name=CORNER only_toplevel=false corner=mc}

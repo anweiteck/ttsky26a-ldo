@@ -20,7 +20,10 @@ C {gnd.sym} -10 40 0 0 {name=l2 lab=GND}
 C {lab_wire.sym} -150 -10 0 0 {name=p1 sig_type=std_logic lab=vin}
 C {gnd.sym} 110 130 0 0 {name=l3 lab=GND}
 C {lab_wire.sym} 110 -10 0 1 {name=p2 sig_type=std_logic lab=vout}
-C {UREx-LDO-v4-cornersim.sym} 85 0 0 0 {name=X1}
+C {UREx-LDO-v4.sym} 85 0 0 0 {name=X1
+schematic=UREx-LDO-v4_parax.spice
+spice_sym_def="tcleval(.include [file normalize UREx-LDO-v4_parax.spice])"
+tclcommand="textwindow [file normalize UREx-LDO-v4_parax.spice]"}
 C {isource.sym} 110 90 0 0 {name=I0 value="PULSE(1m 50m 1m 10n 10n 1m 2m 1)"}
 C {vsource.sym} -70 65 0 0 {name=vin1 value=0.6 savecurrent=false}
 C {gnd.sym} -70 95 0 0 {name=l4 lab=GND}
