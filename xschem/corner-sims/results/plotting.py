@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 
 # ── file paths ────────────────────────────────────────────────────────────────
-LOADREG_CSV  = 'loadreg_raw.csv'   # time(s) vs vout(V)
+LOADREG_CSV  = 'loadreg_raw.csv'      # time(s) vs vout(V)
 VOUTSVIN_CSV = 'VoutvsVin_raw.csv'    # vin(V)  vs vout(V)
 
 # ── load regulation settings ──────────────────────────────────────────────────
@@ -16,6 +16,9 @@ DELTA_I     = 49e-3   # 49 mA step
 # V2 = steady state after pulse   (~2.5ms)
 V1_START, V1_END = 1.4e-3, 1.8e-3
 V2_START, V2_END = 2.4e-3, 2.8e-3
+
+# vin value to sample vout at for statistics
+VOUT_SAMPLE_VIN = 1.8   # V
 
 # =============================================================================
 # 1. VOUT vs VIN
@@ -32,13 +35,26 @@ def plot_voutsvin(filepath):
     fig, ax = plt.subplots(figsize=(9, 6))
     colors  = cm.plasma(np.linspace(0.1, 0.85, n_runs))
 
+    vout_at_sample = []   # vout sampled at VOUT_SAMPLE_VIN for each run
+
     for i in range(n_runs):
         s, e = boundaries[i], boundaries[i+1]
-        ax.plot(x[s:e], vout[s:e], color=colors[i], alpha=0.5, linewidth=0.9)
+        xi   = x[s:e]
+        vi   = vout[s:e]
+        ax.plot(xi, vi, color=colors[i], alpha=0.5, linewidth=0.9)
+
+        # find closest vin point to VOUT_SAMPLE_VIN
+        idx = np.argmin(np.abs(xi - VOUT_SAMPLE_VIN))
+        vout_at_sample.append(vi[idx])
+
+    # mark the sample point
+    ax.axvline(VOUT_SAMPLE_VIN, color='white', linestyle='--',
+               linewidth=1.0, alpha=0.7, label=f'Vin = {VOUT_SAMPLE_VIN} V (sample)')
 
     ax.set_xlabel('Vin (V)', fontsize=12)
     ax.set_ylabel('Vout (V)', fontsize=12)
     ax.set_title(f'Monte Carlo - Vout vs Vin ({n_runs} runs)', fontsize=13)
+    ax.legend(fontsize=9)
     ax.grid(True, alpha=0.3)
 
     sm = plt.cm.ScalarMappable(cmap='plasma', norm=plt.Normalize(1, n_runs))
@@ -50,6 +66,32 @@ def plot_voutsvin(filepath):
     plt.savefig('mc_voutsvin.pdf')
     print(f"Saved mc_voutsvin.png / .pdf  ({n_runs} runs)")
     plt.close()
+
+    # ── vout statistics at sample vin ─────────────────────────────────────────
+    vout_at_sample = np.array(vout_at_sample)
+    print(f"\n{'-'*50}")
+    print(f"  Vout Statistics at Vin = {VOUT_SAMPLE_VIN} V ({n_runs} runs)")
+    print(f"{'-'*50}")
+    print(f"  Mean:  {np.mean(vout_at_sample):.6f} V")
+    print(f"  Std:   {np.std(vout_at_sample):.6f} V")
+    print(f"  Min:   {np.min(vout_at_sample):.6f} V")
+    print(f"  Max:   {np.max(vout_at_sample):.6f} V")
+    print(f"{'-'*50}\n")
+
+    # save to text file
+    with open('voutsvin_results.txt', 'w', encoding='utf-8') as f:
+        f.write("Monte Carlo Vout vs Vin Results\n")
+        f.write(f"Vout sampled at Vin = {VOUT_SAMPLE_VIN} V\n\n")
+        f.write(f"{'Run':<6} {'Vout @ Vin=1.8V (V)'}\n")
+        f.write(f"{'-'*30}\n")
+        for i, v in enumerate(vout_at_sample):
+            f.write(f"{i+1:<6} {v:.6f}\n")
+        f.write(f"\n{'-'*30}\n")
+        f.write(f"{'Mean':<6} {np.mean(vout_at_sample):.6f}\n")
+        f.write(f"{'Std':<6} {np.std(vout_at_sample):.6f}\n")
+        f.write(f"{'Min':<6} {np.min(vout_at_sample):.6f}\n")
+        f.write(f"{'Max':<6} {np.max(vout_at_sample):.6f}\n")
+    print("Saved voutsvin_results.txt")
 
 # =============================================================================
 # 2. LOAD REGULATION
